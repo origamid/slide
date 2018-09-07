@@ -139,6 +139,7 @@ export class Slide {
     this.addSlideEvents();
     this.slidesConfig();
     this.addResizeEvent();
+    this.changeSlide(0);
     return this;
   }
 }
@@ -147,6 +148,7 @@ export class SlideNav extends Slide {
   addArrow(prev, next) {
     this.prevElement = document.querySelector(prev);
     this.nextElement = document.querySelector(next);
+    this.addArrowEvent();
   }
 
   addArrowEvent() {
